@@ -5,7 +5,7 @@ A [Claude Code](https://claude.ai/code) skill/plugin.
 ## Install (users)
 
 ```
-/plugin marketplace add JyothiKumar/channelize-ambition
+/plugin marketplace add Inspire-Labs-AI/channelize-ambition-skill
 ```
 
 Then:
@@ -25,7 +25,7 @@ skills/channelize-ambition/SKILL.md
 Once pushed, an agent or model can fetch it directly (raw):
 
 ```
-https://raw.githubusercontent.com/JyothiKumar/channelize-ambition/main/skills/channelize-ambition/SKILL.md
+https://raw.githubusercontent.com/Inspire-Labs-AI/channelize-ambition-skill/main/skills/channelize-ambition/SKILL.md
 ```
 
 ## Repo layout
