@@ -1,197 +1,222 @@
 ---
 name: channelize
-description: Use when the user says /channelize, "channelize this", or "channelize ambition", or hands over a goal, task, PRD, spec, or any description of what they want done. Picks the one direction of ambition with the most leverage, builds the domain expert's playbook, writes a full expert-grade brief, then executes it.
+description: Use when the user types /channelize or says "channelize" (this, ambition, depth, speed, altitude, range). Do not trigger on "go deeper" or "more detail" about a single point. Clarifies the real ask, picks one direction of ambition, writes an expert brief, then executes it against an outside check.
 ---
 
 # Channelize Ambition
 
-The user hands you an intent: a one-liner, a PRD, a spec, a paragraph, or a dump of context. The form varies. What matters is what they actually want, which is often buried inside the words and sometimes not stated at all. Your instinct is the median move: do what was literally asked, from the material given, with the obvious method, then judge the result yourself. That instinct is competent and forgettable.
-
-Channelizing does four things, in order:
-
-1. Choose the **one direction** of ambition with the most leverage, and argue for it.
-2. Work out how the **best practitioners in this exact niche** actually do this work: their method, their standards, the cases they handle that amateurs miss.
-3. Turn that into a **full brief**, the instructions a master would write for themselves, with the methodology spelled out.
-4. **Execute** the brief as an investigation, until the result would earn a master's respect.
-
-Most of the quality comes from steps 2 and 3. A thin rewrite produces thin work, however hard the execution tries.
+Replace the median move (literal ask, given material, obvious method, self-graded) with: **clarify the real ask → pick one direction → brief like a master → do the work → check it against something outside you.** The deliverable is the point, not the plan.
 
 ---
 
-## Read the input first
+## Gate 1: Size the task (Lite or Full)
 
-Before anything else, find the real ask. It usually sits one level above or below the literal words.
+The user invoked this skill, so never refuse it.
 
-- **A one-liner.** Expand it: who acts on the result, and what do they decide?
-- **A PRD or spec.** Treat it as one hypothesis, not the truth. Mark what it assumes and what it leaves out.
-- **A dump of context with no clear ask.** Name the ask yourself.
-- **A task that hides a goal.** Ask "so that what?" until you reach the thing that actually matters.
+- **Lite: only when no upgrade could change what the user ends up with.** That means lookups, typo or format fixes, renames, and conversions. Just do it well, with no direction label and no extras.
+- **Full: everything else.** That includes short creative, published or judgement work (a tagline, an email, a code review). Full scales down: a short piece gets a short brief.
+- **Can't tell yet** (too vague): go through Gate 2, then decide.
 
-Restate the real ask in one sentence before you start. If you cannot, you do not understand the job yet.
+## Gate 2: Get clarity, once
+
+Write the real ask as one sentence:
+
+> **"[Who] needs [deliverable] so they can [decide / do what], within [constraints]."**
+
+Fill each slot from the request, attached material and context.
+
+- **Can be filled or guessed cheaply:** mark each guess `[assumed]` and continue.
+- **A slot is unknown and guessing wrong would waste the work:**
+  - Do every part that doesn't depend on that slot now: a draft with `[placeholder: …]` where the missing facts go.
+  - Ask up to 3 questions, with your default answer or lean ("If X, likely A; if Y, B").
+  - Stop with nothing done only when every step depends on the answer.
+- **Ask only once per task.** When the reply comes back, go straight to Step 1.
+- **The user says "just do it", or isn't there** (scheduled or agent-run): guess every slot, mark the guesses `[assumed]`, and don't stop again.
+- **PRD or spec:** treat it as one hypothesis. **Context dump with no ask:** name the ask yourself.
+- **Recurring process with no artifact named** ("I do X by hand daily"): deliver the thing that produces X, plus one real sample of its output.
+
+## Follow-ups and pushback
+
+- **An edit to something already delivered is not a new task.** Apply it directly: no brief, no sections. When cutting, keep what serves the mission and drop anything that depended on the removed part.
+- **The user rejects the direction or the add-on:** drop it, deliver the literal version, and don't argue.
+- **Work spanning several sessions:** open each session with one line restating the ask, the direction and the bar. Re-run Gate 1 only for a new deliverable.
 
 ---
 
-## The stance
+## Rules that always apply
 
-- **It's solvable.** Don't hedge before you've tried. When something looks out of reach, take that as a sign you haven't found the route yet.
-- **Someone has already done a version of it.** Find how the best did it and start from their level, not from zero.
-- **Exploring is allowed.** Try the unusual approach. Report honestly if it fails.
-- **Honesty comes before ambition.** Use only tools you actually have. Never present anything as run, measured, sourced or verified unless you did it here. A confident made-up result is worse than an honest gap.
-
----
-
-## Step 0: Catch your default
-
-Write down privately, in one line, what you would have done without channelize. That is the baseline to beat by a wide margin. Hold every later choice against one question: *is this the move of a competent generalist or of a master?*
+1. **Always deliver the literal request.** The ambitious version is added on top. Swap them only if the user confirms; if you can't ask, deliver both and flag the swap. **Exception:** if the premise breaks (for example, the drop wasn't real), lead with that finding, size the real change, and give the fix (for example, dedupe, restate the numbers, guard against it recurring). Deliver the literal request only where it still makes sense, and never invent a story to keep the premise alive.
+2. **Inputs and tools are here → do the work this turn.** Run it, compute what you can (even rough arithmetic from the numbers given), draft it.
+3. **No fabricated facts.** Never present memory as sourced, a plan as executed, or an estimate as measured.
+   - Every number or factual claim **inside the deliverable** must be computed, sourced or given by the user. Otherwise make it a visible `[placeholder: …]` or remove it.
+   - No unsourced statistics or superlatives.
+   - Example inputs you invented must be labelled as invented.
+4. **Outside checks beat self-grading.** Every check names its exact steps, the data or sample size, the duration if relevant, and a numeric pass threshold (mark it "suggested" if you chose it). If it can't run this session, report it as "not yet run".
+5. **Use the right format.** Make decks, docs and sheets with the session's deck, doc or file tool when one exists. Process notes go in the chat, never inside the deliverable. Write them in plain words, not skill jargon ("real ask", "median", "gate").
 
 ---
 
-## Step 1: Choose the direction
+## Step 1: Beat the median, then pick one direction
 
-For each direction, ask: **if I pushed it a hundred times further, how much would what the user ends up with change?** Commit to the largest. You may borrow one supporting move from a second direction, but no more; blending all four dilutes the ambition. If the user names a direction ("channelize depth: ..."), use it.
+**First, write the median answer to yourself in one line, and never show it.** What you deliver must differ from it in substance, not just wording. If the median really is right, say so in one line and explain why.
 
-**Speed: same outcome, a fraction of the time, or far more attempts.**
-Choose it when the shape of the work is known and good enough, and time, cost or how often you can iterate is the real limit ("we do this weekly", "takes days", "can only test one version"). The deep version is close to zero human time, every time: remove the step that dominates the time instead of speeding it up; automate it, run it in parallel, schedule it. Or use the speed for a hundred variants instead of one, and pick the winner with a real measurement. *100×:* a week becomes minutes; a chore runs without anyone. *Where it goes wrong:* making the wrong thing faster.
+| Direction | Choose when | Testable bar | Fails when |
+|---|---|---|---|
+| **Speed**: same outcome, far less time, or far more attempts | The shape of the work is known and good enough. Time, cost or iteration count is the limit | Time or cost per run before vs after, **or** N variants scored on a real metric | It makes the wrong thing faster |
+| **Altitude**: aim at the outcome, not the task | The deliverable stands in for a decision or a recurring problem (report, review, status, fix) | A mechanism shown on **past data** to catch or serve the outcome earlier | The outcome can't be acted on or checked, or the task *is* the outcome (creative work) |
+| **Depth**: this exact thing, done the way the best do it | It must be right; the premise may be wrong; the obvious answer is shallow | Premise tested against raw material; key finding confirmed on data not used to find it | Statistics bolted onto a judgement task, or judgement onto a data task |
+| **Range**: bring in fields the task doesn't obviously need | The obvious approach looks like everyone else's; the work must persuade, design or invent | A borrowed method **changes the result** (before vs after), not just the tone | Personas that change the voice, not the result |
 
-**Altitude: aim at the outcome, not the task.**
-Choose it when the request stands in for something else: there is a meeting or decision downstream, it repeats, it is a report, review, fix or status update. Keep asking **"so that what?"** until you reach the highest level you can still act on and check. Design for that level, often a mechanism that replaces the deliverable. Prove it on history, run it alongside the old way, and name the access needed to take the human out of the loop. *100×:* not a better quarterly deck but a system that catches the problem months earlier; not fixing a crash but owning "the app stays crash-free". *Where it goes wrong:* an outcome you can't act on or check ("go make money"), or creative work, where the task *is* the outcome.
+**Choose in this order:** a direction the user names → the table's "Choose when" → the tie-breakers. Use cost-if-wrong only to break a tie that remains. Never pick the direction whose output is just the median.
+- *Altitude vs Depth:* "Would a perfect version of the literal deliverable still fail the user?" Yes → Altitude. No → Depth.
+- *Speed vs Depth:* "Is the current method already good enough?" Yes → Speed. No → Depth.
 
-**Depth: the same task, done the way the best in the field do it.**
-Choose it when this exact thing must be excellent: it will be relied on, acted on or published; the premise might be wrong; the obvious answer is shallow. Deeper, not bigger; a deeper answer is often shorter. Attack your plan with four questions, and let each one change it:
+**If the user named the direction,** skip the justification. **Otherwise,** justify it in one line: the evidence in the request, and what the runner-up would have produced instead.
 
-1. What would a top professional in this field do here that wasn't asked for?
-2. What's the rawest material they'd start from, instead of what's been digested?
-3. What specific methods and tools would they use?
-4. What, other than you or the user, would show the result is right?
+**The ceiling:** one line on the version that would change what the user ends up with. If an extra that serves the ceiling is cheap (a script, a check, an alert, a rule), include it. If it's expensive, offer it in the open-loop section of the reply.
 
-*100×:* a finding the field's experts didn't have, confirmed on data not used to find it. *Where it goes wrong:* statistics bolted onto a judgement task, or judgement onto a data task.
+**If the bar needs data or timings you don't have, never estimate them.** Commit to the strongest bar you *can* run now (for example, "matches manual output on 3 cases"), and list the original bar as "not yet run" with exact steps.
 
-**Range: bring in fields the task doesn't obviously need.**
-Choose it when the obvious field's approach has stalled or looks like everyone else's; when the work must persuade, communicate, design or invent; when the problem crosses several kinds of expertise. **Replace nouns with verbs:** a quarterly review isn't "a deck", it's "getting busy people to believe a cause-and-effect story and decide under uncertainty in 30 minutes". Each verb points to a field that does it best. Assemble the team an extraordinary result would need, adversaries included (a short seller, a forensic accountant), and use **what they do, never who they are**. No role-play. *100×:* a result no single specialist would have produced. *Where it goes wrong:* a cast of personas that changes the tone but not the result.
-
-**Justify the choice** in two or three sentences: the evidence in the request that points to this direction, and why the runner-up would have produced less. When it is borderline, choose the direction whose failure is cheapest to recover from.
+**For creative or judgement work,** the check is one of: a side-by-side comparison with a named reference, checking each constraint from the brief, or an audience test with a sample size and a pass bar (for example, "5-second test, 10 people, ≥8 can say what it does").
 
 ---
 
 ## Step 2: Build the domain playbook
 
-Before writing anything, work out how masters of this **exact niche** do this work. Not "marketing" but "lifecycle email for a two-sided marketplace". Not "data analysis" but "diagnosing a week-on-week drop in a consumer signup funnel". The narrower the niche, the sharper the moves.
+Name the **exact niche**: not "marketing" but "lifecycle email for a two-sided marketplace". Research it if you can. If you can't, say "playbook from memory". Write down:
+- the **process** in order;
+- the **decision rules** ("if X, do A");
+- the **standard of excellent**;
+- the **traps**: the 3–5 checks a master reviewer in this niche always runs.
 
-If you can search or read sources, research how real practitioners do this: their own writing, postmortems, standards documents, teardowns of the best examples. Don't rely on memory alone when better information is reachable. Then work out:
-
-- **Their process.** The stages a master goes through, in order, and why that order. What they always do first. What they refuse to skip.
-- **Their named techniques and decision rules.** The specific methods, frameworks and heuristics, and *when* each applies ("if the drop is concentrated in one channel, X; if it's spread evenly, Y").
-- **Their standard of excellent.** Benchmarks, numbers, or a concrete state. What separates top 1% work from competent work in this niche.
-- **The cases they handle that amateurs miss.** The edge cases, traps and confounders specific to this domain. For each: how a master spots it and what they do about it.
-- **Their known failure modes.** How this kind of work usually goes wrong even for good people.
-- **The direction's lens.** Speed asks what the master automates and how they keep quality from drifting as volume rises. Altitude asks what mechanism the master would build and how they'd prove it on history. Depth asks for the master's four answers. Range asks which borrowed methods the master would combine, and how.
-
-This playbook is the raw material for the rewrite. If it reads like generic advice that applies to any task, you haven't found the niche yet. Go narrower.
+**Anti-confabulation rule:** keep a technique only if you can explain it in one sentence and say how it applies here. Never invent a name for a technique. The playbook stays internal.
 
 ---
 
-## Step 3: Write the brief (the rewrite)
+## Step 3: Write the brief
 
-The rewrite is the full brief a master would hand themselves before starting: specific enough that a strong practitioner could execute it without asking a single question. **Its length follows the task's complexity, not a template.** A one-line email might get a tight half page. A diagnosis, a strategy, a system or a launch gets a page or more. Never compress the methodology to fit a format.
+Sizes:
+- **Short pieces** (an email, a tagline, a review): 3–5 lines covering bar, traps and proof.
+- **Most tasks:** 6–12 lines.
+- **A page,** only when the deliverable *is* a diagnosis plan, strategy or system design.
 
-Write it in these sections. Every line must carry information that is specific to this task.
+1. **Mission:** who acts, what they decide, what gets delivered (literal + ambitious).
+2. **Bar:** testable, in the niche's own terms.
+3. **Ground truth:** the rawest material available; the beliefs to test.
+4. **Method:** ordered stages, each with its decision rules and output.
+5. **Traps:** each with how to detect it and what to do.
+6. **Proof:** "Wrong if ___", set now, plus the check and confirmation from 4.1.
 
-**1. Mission.** What this exists for, who acts on it and what they decide, and what will be delivered (instead of, or as well as, the literal request).
+**For a "why did X happen" question,** the method is a **ranked list of hypotheses**. Each one gets the evidence that would confirm it and one concrete check. Rank them using whatever numbers you were given.
 
-**2. Direction.** The chosen direction, the evidence for it, why not the runner-up, and the one supporting move if any.
+### Examples (shortened)
 
-**3. The bar.** What excellent means in this niche's own terms, with numbers or a concrete end state. The unreasonable target, stated as reachable.
+**Depth.** *"Why did our signups drop 18% last month?"*
+> **Bar:** ≥90% of the drop explained by named, sized causes, each confirmed on a second independent cut.
+> **Method:** (1) Check the drop is real: tracking changes, analytics deploys, bot filtering, partial periods, changed definition of "signup". (2) Split into traffic × conversion. Traffic fell → acquisition; conversion fell → funnel. (3) Segment by channel, device, geography, new vs returning, landing page, then run a mix-shift analysis. (4) Line up timing against deploys, campaigns, pricing, seasonality. (5) Size each cause until they add up.
+> **Traps:** Simpson's paradox; attribution window not yet closed; one large partner ending; fraud cleanup.
+> **Proof:** Wrong if causes explain <90%. Find a cause by channel, confirm it by landing page or by day.
 
-**4. Ground truth.** The rawest material and where it lives; what's missing and who has it; the beliefs the request rests on, each to be tested against the raw layer.
+**Speed.** *"I write 30 coupon descriptions a day by hand."*
+> Deliver a template or prompt plus one real sample. **Bar:** 5 generated descriptions vs 5 of yours, judged blind by a colleague; time a full run before vs after. **Trap:** facts the merchant didn't state (caps, expiry), so add a check that flags any number missing from the source offer.
 
-**5. Methodology.** The core of the brief, and its longest part. The master's process as ordered stages. For each stage:
-- what to do, with the named techniques;
-- the decision rules ("if A, then B; if C, then D");
-- what that stage must produce before the next one starts.
+**Altitude.** *"Make the monthly churn deck."* (data attached)
+> Build the deck now **and** add an early-warning rule. **Bar:** fit on months 1–6, test on 7–12; flags later churners at least 30 days early, with precision reported. Offered alongside the deck, not as a replacement.
 
-Write it as instructions for this task, not as a description of the field.
-
-**6. Cases and traps.** The domain-specific edge cases, confounders and failure modes from the playbook. For each: how to detect it, and what to do if it is present. Include how the work fails if the direction is pushed too far.
-
-**7. Proof.** "Wrong if ___", decided in advance. The outside check that will judge it: a backtest, reconciliation, test suite, held-out data, primary source, benchmark or real-world test. How any new finding will be confirmed on material not used to find it.
-
-**8. Done means.** The concrete finish line, and the form of the deliverable.
-
-**Quality bar for the brief itself.** Before using it, check:
-- Could a competent generalist have written this? If yes, it is not done; go back to the playbook.
-- Does the methodology name techniques and decision rules a non-expert wouldn't know?
-- Does every edge case have a way to detect it and a way to handle it?
-- Is the proof something outside you?
-
-### What a strong brief looks like (shortened example)
-
-Request: *"Why did our signups drop 18% last month?"* Direction: Depth.
-
-> **Mission:** Find the cause, so the growth lead knows whether to fix a bug, change spend, or accept a trend. Deliver: the cause, its size in signups, and the fix, not a list of possibilities.
-> **Bar:** Account for at least 90% of the drop with named, sized causes, each confirmed by a second independent cut of the data.
-> **Ground truth:** Raw event logs and ad-platform spend, not the dashboard. Belief to test: "the drop is from the new signup form".
-> **Methodology:**
-> 1. Verify the drop is real before explaining it. Check for tracking changes, deploys touching analytics, bot filtering changes, timezone or partial-period effects, and changes to how a "signup" is defined. If the measurement changed, stop and resize the drop first.
-> 2. Decompose it as traffic × conversion. If traffic fell and conversion held, go to acquisition. If conversion fell, go to the funnel.
-> 3. Segment by channel, device, geography, new vs returning, and landing page. Run a mix-shift analysis: separate "each segment got worse" from "the mix moved toward weaker segments".
-> 4. Line up the timing against deploys, campaign changes, pricing changes, competitor events and seasonality (same month last year, same weekday pattern).
-> 5. For each candidate cause, estimate the signups it lost. Stop when the sizes add up to the total.
->
-> **Cases and traps:** Simpson's paradox (every segment looks flat but the total falls: check the mix). An attribution window that hasn't closed yet (recent days undercounted). One large partner or campaign ending (concentration). A/B test traffic splits changing. Fraud cleanup that removed fake signups (a "drop" that's actually good).
-> **Proof:** Wrong if the named causes explain less than 90% of the drop. Confirm each cause on a cut not used to find it, e.g. find it by channel, confirm it by landing page or by day.
-
-A real brief for a real task is usually longer than this.
-
-Show the user: your one-line default, the direction and its justification, and the full brief. Then go straight into the work. Don't wait for approval unless the user asked to review first. Ask **at most one** question, and only if the purpose can't be guessed and guessing wrong would waste the work. Otherwise, state the assumption inside the brief and carry on.
+**Range.** *"Write the landing page for our new API."*
+> Verbs: *get a skeptical developer to try it within 60 seconds.* Borrowed methods: developer docs (copy-paste quickstart above the fold) and direct-response copywriting (one claim, one proof, one action). **Bar:** time-to-first-call test with 5 developers.
 
 ---
 
-## Step 4: Execute the brief
+## Step 4: Execute as a closed loop
 
-**Pre-mortem first.** Imagine the result has failed badly. Write the two or three most likely reasons, and add a guard for each to the plan.
+The work isn't done when the deliverable exists. It's done when the loop closes: **plan → prove → run → confirm → attack → fix → reconcile → hand off.** Don't skip a stage. If you can't do one, say which and why.
 
-**Set up the proof before the main work.** Then work stage by stage through the methodology, producing each stage's output before moving on.
+### 4.1 Design the proof before the work
 
-**Investigate, don't produce.** Loop: hypothesis, touch the raw material, notice the surprise, update the plan. A surprise is the most valuable thing you'll find, so follow it even if it overturns the brief. When the premise breaks, the deliverable changes; say so and update the brief.
+Pick the check that fits the deliverable, and write its pass threshold down **before** you see any result.
 
-**Check it against the domain's own standard.** Hold each draft up to the bar from brief section 3 and the cases from brief section 6, as a master reviewer in this niche would. Fix what fails. Repeat until it meets the bar or you've hit a real limit. The outside check makes the final call, not you.
+| Deliverable | Primary check | Confirmation (independent of the primary) |
+|---|---|---|
+| Data analysis / diagnosis | Reconcile parts to the total (causes sum to the drop, rows to the ledger) | Re-find each finding on a cut, period or source **not used to find it** |
+| Code / fix | A failing test that reproduces the bug, then passes | Edge-case tests (empty, null, max, concurrent) plus the existing suite stays green |
+| Automation / Speed | Run on N real past inputs; diff against the manual output | Time or cost per run, measured, before vs after |
+| Mechanism / Altitude | Backtest on history it wasn't tuned on | Run it alongside the old way for one cycle |
+| Research / claims | Two independent primary sources per key claim | A source that would contradict it, searched for on purpose |
+| Writing / creative | Check each constraint from the brief | Side-by-side with a named reference, or an audience test (sample size + bar) |
+| Plan / strategy | Kill criteria: what result, by when, stops it | Leading indicators that move within the first 2 weeks |
 
-**Hold the bar.** When blocked, try three ways around, cheapest first. Then report the level actually reached and what would close the gap.
+Also write a **pre-mortem**: the 2–3 likeliest ways this fails, each with a guard built into the method.
 
-**You're done when:**
-- the outside check has run (or has been written out exactly for the user to run), and its result is reported, failures included;
-- the beliefs have been tested against the raw material;
-- every case from brief section 6 has been checked or explicitly ruled out;
-- the chosen direction has reached its 100× version, or the shortfall is honestly measured;
-- there is at least one thing the user didn't know, confirmed on material not used to find it, or an honest statement that you looked hard and there wasn't;
-- the result serves the mission, not just the literal request.
+### 4.2 Run the stages with a ledger
 
----
+Keep a running ledger. It's internal; show only a summary.
 
-## Before you reply
+`stage | hypothesis or action | result [ran/sourced/assumed] | surprise? | next`
 
-Re-read the work as the toughest master in this niche would. Fix any of these:
-- leaning on summaries instead of raw material;
-- describing a method instead of running it;
-- an edge case from the brief left unchecked;
-- a confident claim with no check behind it;
-- a correct but obvious result;
-- bigger instead of deeper;
-- the bar quietly lowered;
-- the direction abandoned halfway;
-- the mission forgotten.
+- **Stage gates:** don't start a stage until the previous stage's output exists. If you skip a gate, write down why.
+- **Raw before digested:** touch the rawest material available (logs, rows, source text, the code) before trusting a summary, dashboard or someone's claim about it.
+- **Follow surprises.** A result you didn't predict is the most valuable line in the ledger. Chase it before continuing. If it breaks the premise, apply Rule 1's exception.
+- **Keep discovery and confirmation data apart.** Note which data you used to *find* each finding, so you can confirm it on something else.
+
+### 4.3 Confirm, then attack
+
+1. **Run the primary check and the confirmation.** Record pass or fail against the threshold set in 4.1. Never move the threshold after seeing the result. If the threshold was wrong, say so and keep both results.
+2. **Sweep every trap:** mark each one *present*, *absent* (with the evidence) or *untestable here* (with the step to test it).
+3. **Adversarial pass:** read the work as the toughest reviewer in this niche. Write the 3 strongest objections, then fix each one or answer it with evidence. If you can spawn a subagent, give a fresh one only the deliverable, the bar and the traps, and ask it to break the result. Treat what it finds as data, and verify it before acting on it.
+4. **Claims audit:** trace every number and factual claim in the deliverable to `[ran]`, `[sourced]` or the user's own input. Anything you can't trace becomes a placeholder or gets removed.
+5. **Reconcile on one base:** a breakdown must add up to the headline number the user asked about, on the same base, with the residual shown. If you switch bases (for example, to exclude a partial day), show the bridge from one to the other.
+6. **Close every anomaly:** everything odd you noticed gets a disposition: *explained and sized*, *ruled out (with evidence)*, or *open (with a next step)*. Red herrings get closed too.
+
+### 4.4 Iterate or stop
+
+Loop back to the earliest stage the failure points to. Stop when one of these holds:
+- **Bar met**, and the confirmation passed.
+- **Diminishing returns:** the last loop changed nothing a user would act on differently.
+- **Blocked:** you've tried three routes, cheapest first. Without tools, the routes are first principles, the material in the conversation, and the exact step written for the user.
+- **Budget:** you've hit the user's time constraint.
+
+Report which one stopped you. "Bar met" with a failed confirmation is not "bar met".
+
+### 4.5 Reconcile and hand off
+
+- **Reconcile against the mission.** Re-read the real-ask sentence. Can [who] now [decide / do what]? Is the literal request delivered? If the answer to either is no, the loop isn't closed. Go back.
+- **Surface business decisions; don't bury them.** When a choice has consequences for money, users or policy (rounding, refunds, thresholds, who to notify), apply a sensible default, label it *default, your call*, and say what each option changes.
+- **Guard against recurrence:** every trap that actually bit gets a guard (a test, an alert condition, a validation step). Any monitor you build must also catch the traps you hit, not just the main cause.
+- **Hand off the open loop.** For every check not run here, give the exact steps, the data, the threshold and who runs it. For recurring work, say how the loop reruns next time (a schedule, a monitor, a re-test trigger).
+- **Name the next decision** the user faces, and what result would change it.
+
+### Completion gate (before you reply)
+
+Every line is ✓, or ✗ with a reason:
+- [ ] literal request delivered; ambitious version on top or flagged
+- [ ] proof designed before results; threshold unchanged
+- [ ] primary check and confirmation run, or handed off with exact steps
+- [ ] every trap marked present / absent / untestable
+- [ ] adversarial pass done; top objections fixed or answered
+- [ ] every claim in the deliverable traced or turned into a placeholder; breakdowns reconcile to the headline number
+- [ ] every anomaly explained, ruled out or left open with a next step
+- [ ] business decisions surfaced with a default; traps that bit have guards
+- [ ] stop reason stated
+- [ ] mission reconciled; next decision named
+- [ ] any "new finding" confirmed on material not used to find it ("no new finding" is valid)
+
+A ✗ is fine if it's reported. A ✗ hidden behind confident prose is the failure this skill exists to prevent.
 
 ---
 
 ## What to return
 
-1. **The answer or decision**, first, in about 3 lines.
-2. **Channelized:** your one-line default, the direction and why, and the full brief.
-3. **The work itself.**
-4. **Evidence:** the queries, code, sources and data behind each claim, rerunnable where possible.
-5. **Cases checked:** each trap from the brief, and whether it was present.
-6. **What broke and what's new:** the beliefs that held or broke, and the new finding with its confirmation.
-7. **Check result**, against the "wrong if" you set in advance: passed, failed, or not yet run.
-8. **Next lever:** one line on what access, data or setup would take this further in the same direction.
+1. **The answer or decision**, in 3 lines or fewer, with its status: *confirmed*, *partially confirmed*, or *unconfirmed*.
+2. **The deliverable**: literal plus ambitious, in the right format.
+3. **How it was channelized**, in 6 lines or fewer: the ask, the direction and why, the bar, and "wrong if". Show the full brief only for multi-stage work.
+4. **Proof**, in 10 lines or fewer:
+   - the primary check and confirmation, each with its result vs threshold;
+   - the traps (present, absent or untestable);
+   - the objections and how each was handled;
+   - why you stopped.
+5. **Open loop**: the checks handed to the user (steps, data, threshold), how the work reruns if it recurs, and the next decision.
 
-No confidence scores, no self-critique section, no filler.
+Claims that something passed include the last lines of the real run output. Keep the reply to about 600 words unless the user asks for more. Long detail (full ledger, scripts, tables) goes into files you link, not into the reply.
+
+**Lite:** the deliverable only.
