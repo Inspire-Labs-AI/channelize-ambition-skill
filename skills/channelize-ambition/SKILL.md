@@ -1,13 +1,13 @@
 ---
-name: channelize-ambition
-description: Use when the user says /channelize, "channelize this" or "channelize ambition" with a goal or task. Picks the one direction of ambition with the most leverage, builds the domain expert's playbook, writes a full expert-grade brief, then executes it.
+name: channelize
+description: Use when the user says /channelize, "channelize this", or "channelize ambition", or hands over a goal, task, PRD, spec, or any description of what they want done. Picks the one direction of ambition with the most leverage, builds the domain expert's playbook, writes a full expert-grade brief, then executes it.
 ---
 
 # Channelize Ambition
 
-The user hands you an intent — a one-liner, a PRD, a spec, a paragraph, or a dump of context. The form varies; what matters is what they actually want, which is often buried in it and sometimes not stated at all. Your instinct is the median move: do what was literally asked, from the material given, with the obvious method, then judge the result yourself. That instinct is competent and forgettable.
+The user hands you an intent: a one-liner, a PRD, a spec, a paragraph, or a dump of context. The form varies. What matters is what they actually want, which is often buried inside the words and sometimes not stated at all. Your instinct is the median move: do what was literally asked, from the material given, with the obvious method, then judge the result yourself. That instinct is competent and forgettable.
 
-Channelizing does four things in order:
+Channelizing does four things, in order:
 
 1. Choose the **one direction** of ambition with the most leverage, and argue for it.
 2. Work out how the **best practitioners in this exact niche** actually do this work: their method, their standards, the cases they handle that amateurs miss.
@@ -15,6 +15,19 @@ Channelizing does four things in order:
 4. **Execute** the brief as an investigation, until the result would earn a master's respect.
 
 Most of the quality comes from steps 2 and 3. A thin rewrite produces thin work, however hard the execution tries.
+
+---
+
+## Read the input first
+
+Before anything else, find the real ask. It usually sits one level above or below the literal words.
+
+- **A one-liner.** Expand it: who acts on the result, and what do they decide?
+- **A PRD or spec.** Treat it as one hypothesis, not the truth. Mark what it assumes and what it leaves out.
+- **A dump of context with no clear ask.** Name the ask yourself.
+- **A task that hides a goal.** Ask "so that what?" until you reach the thing that actually matters.
+
+Restate the real ask in one sentence before you start. If you cannot, you do not understand the job yet.
 
 ---
 
@@ -27,21 +40,21 @@ Most of the quality comes from steps 2 and 3. A thin rewrite produces thin work,
 
 ---
 
-## Step 1: Catch your default
+## Step 0: Catch your default
 
-Write down privately, in one line, what you'd have done without "channelize". That's the baseline to beat by a wide margin. Hold every later choice against one question: *is this the move of a competent generalist or of a master?*
+Write down privately, in one line, what you would have done without channelize. That is the baseline to beat by a wide margin. Hold every later choice against one question: *is this the move of a competent generalist or of a master?*
 
 ---
 
-## Step 2: Choose the direction
+## Step 1: Choose the direction
 
-For each direction, ask: **if I went ten times further this way, how much would what the user ends up with change?** Commit to the largest. You may borrow one supporting move from a second direction, but no more; blending all four dilutes the ambition. If the user names a direction ("channelize depth: …"), use it.
+For each direction, ask: **if I pushed it a hundred times further, how much would what the user ends up with change?** Commit to the largest. You may borrow one supporting move from a second direction, but no more; blending all four dilutes the ambition. If the user names a direction ("channelize depth: ..."), use it.
 
 **Speed: same outcome, a fraction of the time, or far more attempts.**
 Choose it when the shape of the work is known and good enough, and time, cost or how often you can iterate is the real limit ("we do this weekly", "takes days", "can only test one version"). The deep version is close to zero human time, every time: remove the step that dominates the time instead of speeding it up; automate it, run it in parallel, schedule it. Or use the speed for a hundred variants instead of one, and pick the winner with a real measurement. *100×:* a week becomes minutes; a chore runs without anyone. *Where it goes wrong:* making the wrong thing faster.
 
 **Altitude: aim at the outcome, not the task.**
-Choose it when the request stands in for something else: there's a meeting or decision downstream, it repeats, it's a report, review, fix or status update. Keep asking **"so that what?"** until you reach the highest level you can still act on and check. Design for that level, often a mechanism that replaces the deliverable. Prove it on history, run it alongside the old way, and name the access needed to take the human out of the loop. *100×:* not a better quarterly deck but a system that catches the problem months earlier; not fixing a crash but owning "the app stays crash-free". *Where it goes wrong:* an outcome you can't act on or check ("go make money"), or creative work, where the task *is* the outcome.
+Choose it when the request stands in for something else: there is a meeting or decision downstream, it repeats, it is a report, review, fix or status update. Keep asking **"so that what?"** until you reach the highest level you can still act on and check. Design for that level, often a mechanism that replaces the deliverable. Prove it on history, run it alongside the old way, and name the access needed to take the human out of the loop. *100×:* not a better quarterly deck but a system that catches the problem months earlier; not fixing a crash but owning "the app stays crash-free". *Where it goes wrong:* an outcome you can't act on or check ("go make money"), or creative work, where the task *is* the outcome.
 
 **Depth: the same task, done the way the best in the field do it.**
 Choose it when this exact thing must be excellent: it will be relied on, acted on or published; the premise might be wrong; the obvious answer is shallow. Deeper, not bigger; a deeper answer is often shorter. Attack your plan with four questions, and let each one change it:
@@ -56,11 +69,11 @@ Choose it when this exact thing must be excellent: it will be relied on, acted o
 **Range: bring in fields the task doesn't obviously need.**
 Choose it when the obvious field's approach has stalled or looks like everyone else's; when the work must persuade, communicate, design or invent; when the problem crosses several kinds of expertise. **Replace nouns with verbs:** a quarterly review isn't "a deck", it's "getting busy people to believe a cause-and-effect story and decide under uncertainty in 30 minutes". Each verb points to a field that does it best. Assemble the team an extraordinary result would need, adversaries included (a short seller, a forensic accountant), and use **what they do, never who they are**. No role-play. *100×:* a result no single specialist would have produced. *Where it goes wrong:* a cast of personas that changes the tone but not the result.
 
-**Justify the choice** in two or three sentences: the evidence in the request that points to this direction, and why the runner-up would have produced less. When it's borderline, choose the direction whose failure is cheapest to recover from.
+**Justify the choice** in two or three sentences: the evidence in the request that points to this direction, and why the runner-up would have produced less. When it is borderline, choose the direction whose failure is cheapest to recover from.
 
 ---
 
-## Step 3: Build the domain playbook
+## Step 2: Build the domain playbook
 
 Before writing anything, work out how masters of this **exact niche** do this work. Not "marketing" but "lifecycle email for a two-sided marketplace". Not "data analysis" but "diagnosing a week-on-week drop in a consumer signup funnel". The narrower the niche, the sharper the moves.
 
@@ -77,11 +90,11 @@ This playbook is the raw material for the rewrite. If it reads like generic advi
 
 ---
 
-## Step 4: Write the brief (the rewrite)
+## Step 3: Write the brief (the rewrite)
 
 The rewrite is the full brief a master would hand themselves before starting: specific enough that a strong practitioner could execute it without asking a single question. **Its length follows the task's complexity, not a template.** A one-line email might get a tight half page. A diagnosis, a strategy, a system or a launch gets a page or more. Never compress the methodology to fit a format.
 
-Write it in these sections. Every line must carry information that's specific to this task.
+Write it in these sections. Every line must carry information that is specific to this task.
 
 **1. Mission.** What this exists for, who acts on it and what they decide, and what will be delivered (instead of, or as well as, the literal request).
 
@@ -98,14 +111,14 @@ Write it in these sections. Every line must carry information that's specific to
 
 Write it as instructions for this task, not as a description of the field.
 
-**6. Cases and traps.** The domain-specific edge cases, confounders and failure modes from the playbook. For each: how to detect it, and what to do if it's present. Include how the work fails if the direction is pushed too far.
+**6. Cases and traps.** The domain-specific edge cases, confounders and failure modes from the playbook. For each: how to detect it, and what to do if it is present. Include how the work fails if the direction is pushed too far.
 
 **7. Proof.** "Wrong if ___", decided in advance. The outside check that will judge it: a backtest, reconciliation, test suite, held-out data, primary source, benchmark or real-world test. How any new finding will be confirmed on material not used to find it.
 
 **8. Done means.** The concrete finish line, and the form of the deliverable.
 
 **Quality bar for the brief itself.** Before using it, check:
-- Could a competent generalist have written this? If yes, it's not done; go back to the playbook.
+- Could a competent generalist have written this? If yes, it is not done; go back to the playbook.
 - Does the methodology name techniques and decision rules a non-expert wouldn't know?
 - Does every edge case have a way to detect it and a way to handle it?
 - Is the proof something outside you?
@@ -133,24 +146,24 @@ Show the user: your one-line default, the direction and its justification, and t
 
 ---
 
-## Step 5: Execute the brief
+## Step 4: Execute the brief
 
 **Pre-mortem first.** Imagine the result has failed badly. Write the two or three most likely reasons, and add a guard for each to the plan.
 
 **Set up the proof before the main work.** Then work stage by stage through the methodology, producing each stage's output before moving on.
 
-**Investigate, don't produce.** Loop: hypothesis → touch the raw material → notice the surprise → update the plan. A surprise is the most valuable thing you'll find, so follow it even if it overturns the brief. When the premise breaks, the deliverable changes; say so and update the brief.
+**Investigate, don't produce.** Loop: hypothesis, touch the raw material, notice the surprise, update the plan. A surprise is the most valuable thing you'll find, so follow it even if it overturns the brief. When the premise breaks, the deliverable changes; say so and update the brief.
 
-**Check it against the domain's own standard.** Hold each draft up to the bar from section 3 and the cases from section 6, as a master reviewer in this niche would. Fix what fails. Repeat until it meets the bar or you've hit a real limit. The outside check makes the final call, not you.
+**Check it against the domain's own standard.** Hold each draft up to the bar from brief section 3 and the cases from brief section 6, as a master reviewer in this niche would. Fix what fails. Repeat until it meets the bar or you've hit a real limit. The outside check makes the final call, not you.
 
 **Hold the bar.** When blocked, try three ways around, cheapest first. Then report the level actually reached and what would close the gap.
 
 **You're done when:**
 - the outside check has run (or has been written out exactly for the user to run), and its result is reported, failures included;
 - the beliefs have been tested against the raw material;
-- every case from section 6 has been checked or explicitly ruled out;
+- every case from brief section 6 has been checked or explicitly ruled out;
 - the chosen direction has reached its 100× version, or the shortfall is honestly measured;
-- there's at least one thing the user didn't know, confirmed on material not used to find it, or an honest statement that you looked hard and there wasn't;
+- there is at least one thing the user didn't know, confirmed on material not used to find it, or an honest statement that you looked hard and there wasn't;
 - the result serves the mission, not just the literal request.
 
 ---
@@ -178,7 +191,7 @@ Re-read the work as the toughest master in this niche would. Fix any of these:
 4. **Evidence:** the queries, code, sources and data behind each claim, rerunnable where possible.
 5. **Cases checked:** each trap from the brief, and whether it was present.
 6. **What broke and what's new:** the beliefs that held or broke, and the new finding with its confirmation.
-7. **Check result**, against the "wrong if" you set in advance: passed / failed / not yet run.
-8. **Next 10×:** one line on what access, data or setup would take this further in the same direction.
+7. **Check result**, against the "wrong if" you set in advance: passed, failed, or not yet run.
+8. **Next lever:** one line on what access, data or setup would take this further in the same direction.
 
 No confidence scores, no self-critique section, no filler.
