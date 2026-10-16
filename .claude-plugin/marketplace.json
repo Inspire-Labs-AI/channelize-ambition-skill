@@ -1,0 +1,18 @@
+{
+  "$schema": "https://code.claude.com/schemas/marketplace.json",
+  "name": "channelize-ambition",
+  "owner": {
+    "name": "JyothiKumar"
+  },
+  "metadata": {
+    "description": "Channelize your ambition skills for Claude Code.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "channelize-ambition",
+      "source": "./",
+      "description": "Channelize your ambition — a Claude Code skill."
+    }
+  ]
+}
