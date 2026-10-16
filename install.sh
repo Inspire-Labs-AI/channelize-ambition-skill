@@ -23,7 +23,12 @@ for arg in "$@"; do
 done
 
 # --- locate the SKILL.md source (local checkout, else download it) ---
-SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" 2>/dev/null && pwd || echo "")
+# When piped (curl ... | sh) $0 is the shell name, so there is no real script
+# location; skip the local probe in that case instead of probing the cwd.
+case "$0" in
+  *install.sh) SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" 2>/dev/null && pwd || echo "") ;;
+  *)           SCRIPT_DIR="" ;;
+esac
 TMP=""
 cleanup() { [ -n "$TMP" ] && rm -f "$TMP" || true; }
 trap cleanup EXIT INT TERM

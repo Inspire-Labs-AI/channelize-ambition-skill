@@ -10,10 +10,14 @@ $Skill  = 'channelize-ambition'
 $Raw    = "https://raw.githubusercontent.com/$Repo/$Branch/skills/$Skill/SKILL.md"
 
 # Locate the source SKILL.md (local checkout, else download it).
-$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
-$LocalFile = Join-Path $ScriptDir "skills/$Skill/SKILL.md"
+# $MyInvocation.MyCommand.Path is empty when this script is piped into iex,
+# so guard it before calling Split-Path.
+$ScriptPath = $MyInvocation.MyCommand.Path
+if (-not $ScriptPath -and $PSScriptRoot) { $ScriptPath = $PSScriptRoot }
+$ScriptDir = if ($ScriptPath) { Split-Path -Parent $ScriptPath } else { $null }
+$LocalFile = if ($ScriptDir) { Join-Path $ScriptDir "skills/$Skill/SKILL.md" } else { $null }
 
-if (Test-Path -LiteralPath $LocalFile) {
+if ($LocalFile -and (Test-Path -LiteralPath $LocalFile)) {
   $Src = $LocalFile
   Write-Host "Using local copy: $Src"
 } else {
