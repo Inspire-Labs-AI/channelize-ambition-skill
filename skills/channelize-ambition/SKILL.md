@@ -1,5 +1,5 @@
 ---
-name: channelize
+name: channelize-ambition
 description: Use when the user types /channelize or says "channelize" (this, ambition, depth, speed, altitude, range). Do not trigger on "go deeper" or "more detail" about a single point. Clarifies the real ask, picks one direction of ambition, writes an expert brief, then executes it against an outside check.
 ---
 
