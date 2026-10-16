@@ -14,6 +14,20 @@ Then:
 /plugin install channelize-ambition@channelize-ambition
 ```
 
+## Skill file
+
+The skill itself lives at:
+
+```
+skills/channelize-ambition/SKILL.md
+```
+
+Once pushed, an agent or model can fetch it directly (raw):
+
+```
+https://raw.githubusercontent.com/JyothiKumar/channelize-ambition/main/skills/channelize-ambition/SKILL.md
+```
+
 ## Repo layout
 
 ```
