@@ -31,6 +31,64 @@ Channelize-ambition attacks exactly that gap. Before doing any work it:
 The result: work aimed at the outcome instead of the task, judged by evidence
 instead of self-assessment, with at least one thing the user didn't already know.
 
+## Install
+
+The skill is just a Markdown file. Installing it means copying it into your
+agent's skills folder, which is what registers the `/channelize-ambition`
+command.
+
+### Any agent, no Node needed
+
+`install.sh` (macOS, Linux, WSL) and `install.ps1` (Windows) copy the skill into
+every agent folder they detect. They only need a shell plus `curl` or `wget`,
+never Node.
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/Inspire-Labs-AI/channelize-ambition-skill/main/install.sh | sh
+```
+
+```powershell
+irm https://raw.githubusercontent.com/Inspire-Labs-AI/channelize-ambition-skill/main/install.ps1 | iex
+```
+
+Add `--all` / `-All` to install into every known folder even if the agent was
+not detected.
+
+### Cross-agent via the skills CLI
+
+```sh
+npx -y skills add Inspire-Labs-AI/channelize-ambition-skill
+```
+
+This CLI needs Node 22 or later; on Node 20 it crashes before reading the repo.
+If you are on Node 20, use the shell installer above instead.
+
+### Claude Code plugin marketplace
+
+```
+/plugin marketplace add Inspire-Labs-AI/channelize-ambition-skill
+/plugin install channelize-ambition
+```
+
+### Manual
+
+Copy `skills/channelize-ambition/SKILL.md` into any of these folders as
+`channelize-ambition/SKILL.md`:
+
+| Agent | Folder |
+| --- | --- |
+| Claude Code | `~/.claude/skills/` |
+| Codex | `~/.codex/skills/` |
+| OpenCode | `~/.config/opencode/skills/` or `.opencode/skills/` |
+| Universal | `~/.agents/skills/` |
+
+## Use
+
+Restart your agent, then invoke it:
+
+- Claude Code, OpenCode: `/channelize-ambition`
+- Codex: `$channelize-ambition`
+
 ## Where it is
 
 ```
