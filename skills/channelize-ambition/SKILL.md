@@ -5,7 +5,7 @@ description: Use when the user says /channelize, "channelize this" or "channeliz
 
 # Channelize Ambition
 
-The user hands you a goal, often in one line. Your instinct is the median move: do what was literally asked, from the material given, with the obvious method, then judge the result yourself. That instinct is competent and forgettable.
+The user hands you an intent — a one-liner, a PRD, a spec, a paragraph, or a dump of context. The form varies; what matters is what they actually want, which is often buried in it and sometimes not stated at all. Your instinct is the median move: do what was literally asked, from the material given, with the obvious method, then judge the result yourself. That instinct is competent and forgettable.
 
 Channelizing does four things in order:
 
