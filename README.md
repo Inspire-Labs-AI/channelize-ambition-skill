@@ -2,7 +2,7 @@
 
 ## What is this
 
-A skill that takes a goal — usually one line — and channels it into the single
+A skill that takes a goal and channels it into the single
 highest-leverage direction, builds the domain expert's playbook, writes a full
 expert-grade brief, then executes it.
 
@@ -10,7 +10,7 @@ expert-grade brief, then executes it.
 
 Ask an AI for something and you get the median move: do what was literally
 asked, from the material given, with the obvious method, and grade the result
-itself. It is competent, plausible, and forgettable — and it quietly caps the
+itself. It is competent, plausible, and forgettable and it quietly caps the
 ceiling on every task.
 
 The root cause is that the model never stops to choose a direction, never
@@ -31,7 +31,7 @@ Channelize-ambition attacks exactly that gap. Before doing any work it:
 The result: work aimed at the outcome instead of the task, judged by evidence
 instead of self-assessment, with at least one thing the user didn't already know.
 
-## Where it is
+## Where it is on this repo: 
 
 ```
 skills/channelize-ambition/SKILL.md
